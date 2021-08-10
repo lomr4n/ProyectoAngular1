@@ -1,0 +1,14 @@
+<form (submit)="submit()" [formGroup]="registerForm">
+
+    <input type="text" id="nombre" class="form__input" placeholder="Nombre" formControlName="user">
+    <input type="text" id="apellido" class="form__input" placeholder="Apellido" formControlName="surname">
+    <input type="password" id="password" class="form__input" placeholder="Contraseña" formControlName="password">
+    <input type="email" id="email-corporativo" class="form__input" placeholder="Email corporativo" formControlName="company_email">
+    <input type="email" id="email-personal" class="form__input" placeholder="Email personal" formControlName="personal_email">
+    <input type="text" id="ciudad" class="form__input" placeholder="Ciudad" formControlName="city">
+    <input type="text" id="url" class="form__input" placeholder="URL de imagen" formControlName="image_url">
+    <div class="form__buttons">
+        <input type="submit" class="form__button">
+        <input type="reset" class="form__button">
+    </div>
+</form>
