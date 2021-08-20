@@ -1,0 +1,30 @@
+{
+  "personas": [
+    {
+      "user": "Javier",
+      "surname": "Marmol",
+      "password": "1234",
+      "company_email": "javier.marmol@gmail.com",
+      "personal_email": "javier.marmol@gmail.com",
+      "city": "Calahorra",
+      "active": true,
+      "create_date": "2021-08-12",
+      "image_url": "https://google.com",
+      "termination_date": null,
+      "id": 6
+    },
+    {
+      "user": "Pedro",
+      "surname": "Picapiedra",
+      "password": "1234",
+      "company_email": "2@2.com",
+      "personal_email": "3@3.com",
+      "city": "Barcelona",
+      "active": true,
+      "create_date": "2021-08-20",
+      "image_url": "https://instagram.com",
+      "termination_date": null,
+      "id": 7
+    }
+  ]
+}

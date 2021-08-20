@@ -12,9 +12,22 @@ export class ApiService {
     private http: HttpClient
   ) { }
 
-  url:String="http://localhost:8080/api/v1/personas"
+  url:String="http://localhost:3000/personas"
 
- crearPersona(persona:Persona): Observable<any>{
+ crearPersona(persona:Persona): Observable<Persona>{
     return this.http.post<Persona>(`${this.url}`,persona);
   }
+  getAll(): Observable<Persona[]>{
+    return this.http.get<Persona[]>(`${this.url}`);
+  }
+  getOne(id:string): Observable<Persona>{
+    return this.http.get<Persona>(`${this.url}/${id}`);
+  }
+  delete(persona:Persona): Observable<any>{
+    return this.http.delete(`${this.url}/${persona.id}`);
+  }
+  
+ actualizarPersona(id:number, persona:Persona): Observable<Persona>{
+  return this.http.put<Persona>(`${this.url}/${id}`,persona);
+}
 }

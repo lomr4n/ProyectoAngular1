@@ -3,6 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { ApiService } from '../api.service';
 import { Persona } from '../other/persona';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -12,7 +13,7 @@ import { Persona } from '../other/persona';
 })
 export class FormComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private datePipe: DatePipe, private api:ApiService) { }
+  constructor(private formBuilder: FormBuilder, private datePipe: DatePipe, private api:ApiService, private router:Router) { }
   date=new Date();
   registerForm = this.formBuilder.group(<any>{
     user: [''],
@@ -33,6 +34,7 @@ export class FormComponent implements OnInit {
   submit(){
     this.api.crearPersona(this.registerForm.value).subscribe(res=>{
       console.log(res);
+      this.router.navigate(["/personas"]);
     });
   }
 }

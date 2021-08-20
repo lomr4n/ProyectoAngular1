@@ -1,4 +1,5 @@
 export interface Persona {
+    id?:number
     user:String
     surname:String
     password:String

@@ -1,6 +1,7 @@
 <div class="general">
     <h2 class="link" [routerLink] = "['/personas']">Volver</h2>
-    <form class="personaForm" (submit)="submit()" [formGroup]="registerForm">
+
+        <form class="personaForm" (submit)="submit()" [formGroup]="registerForm">
 
         <input type="text" id="nombre" class="form__input" placeholder="Nombre" formControlName="user">
         <input type="text" id="apellido" class="form__input" placeholder="Apellido" formControlName="surname">

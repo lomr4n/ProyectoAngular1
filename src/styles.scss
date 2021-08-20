@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0px auto;
+    padding: 0px auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+@mixin reset-styles{
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
