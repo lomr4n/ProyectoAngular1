@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormUpdateComponent } from './form-update/form-update.component';
-import { FormComponent } from './form/form.component';
-import { ListComponent } from './list/list.component';
- 
+import { FormUpdateComponent } from './Persona/infrastucture/form-update/form-update.component';
+import { FormComponent } from './Persona/infrastucture/form/form.component';
+import { ListComponent } from './Persona/infrastucture/list/list.component';
+
 const routes: Routes = [
-  {path:'add-persona', component: FormComponent},
+  {path:'add-persona-card', component: FormComponent},
   {path:'personas', component: ListComponent},
-  {path:'update-persona/:id', component: FormUpdateComponent},
+  {path:'update-persona-card/:id', component: FormUpdateComponent},
   { path: '',   redirectTo: '/personas', pathMatch: 'full' }
 
 ];

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ApiService } from '../api.service';
-import { Persona } from '../other/persona';
+import { ApiService } from '../../aplication/api.service';
+import { Persona } from '../../model/persona';
 
 @Component({
   selector: 'app-form-update',
@@ -35,7 +35,7 @@ export class FormUpdateComponent implements OnInit {
         termination_date:null
       })
     })
-  }  
+  }
   submit(){
     this.api.actualizarPersona(this.persona.id||0,this.registerForm.value).subscribe(res=>{
       console.log(res);

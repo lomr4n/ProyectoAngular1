@@ -1,17 +1,17 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ApiService } from '../api.service';
+import { ApiService } from '../../aplication/api.service';
 import { Router } from '@angular/router';
-import { Persona } from '../other/persona';
+import { Persona } from '../../model/persona';
 
 @Component({
-  selector: 'app-persona',
-  templateUrl: './persona.component.html',
-  styleUrls: ['./persona.component.scss']
+  selector: 'app-persona-card',
+  templateUrl: './persona-card.component.html',
+  styleUrls: ['./persona-card.component.scss']
 })
-export class PersonaComponent implements OnInit {
+export class PersonaCardComponent implements OnInit {
 
   constructor(private api:ApiService, private router:Router) { }
-  
+
   ngOnInit(): void {
   }
 
@@ -27,6 +27,6 @@ export class PersonaComponent implements OnInit {
     });
   }
   navigate(){
-    this.router.navigate(["update-persona/"+this.persona.id]);
+    this.router.navigate(["update-persona-card/"+this.persona.id]);
   }
 }

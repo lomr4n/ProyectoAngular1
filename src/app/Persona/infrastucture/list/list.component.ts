@@ -1,8 +1,8 @@
 import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ApiService } from '../api.service';
-import { Persona } from '../other/persona';
+import { ApiService } from '../../aplication/api.service';
+import { Persona } from '../../model/persona';
 
 @Component({
   selector: 'app-list',
@@ -29,6 +29,6 @@ export class ListComponent implements OnInit {
     })
   }
   navigate(){
-    this.router.navigate(["/add-persona"]);
+    this.router.navigate(["/add-persona-card"]);
   }
 }

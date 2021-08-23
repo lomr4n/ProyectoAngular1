@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Persona } from './other/persona';
+import { Persona } from '../model/persona';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +26,7 @@ export class ApiService {
   delete(persona:Persona): Observable<any>{
     return this.http.delete(`${this.url}/${persona.id}`);
   }
-  
+
  actualizarPersona(id:number, persona:Persona): Observable<Persona>{
   return this.http.put<Persona>(`${this.url}/${id}`,persona);
 }

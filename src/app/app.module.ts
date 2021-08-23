@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
+import { FormComponent } from './Persona/infrastucture/form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
-import { ListComponent } from './list/list.component';
-import { PersonaComponent } from './persona/persona.component';
-import { FormUpdateComponent } from './form-update/form-update.component';
+import { ListComponent } from './Persona/infrastucture/list/list.component';
+import { PersonaCardComponent } from './Persona/infrastucture/persona-card/persona-card.component';
+import { FormUpdateComponent } from './Persona/infrastucture/form-update/form-update.component';
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { FormUpdateComponent } from './form-update/form-update.component';
     AppComponent,
     FormComponent,
     ListComponent,
-    PersonaComponent,
+    PersonaCardComponent,
     FormUpdateComponent
   ],
   imports: [

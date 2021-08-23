@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-import { ApiService } from '../api.service';
-import { Persona } from '../other/persona';
+import { ApiService } from '../../aplication/api.service';
+import { Persona } from '../../model/persona';
 import { Router } from '@angular/router';
 
 @Component({
