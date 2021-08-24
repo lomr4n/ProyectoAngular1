@@ -27,6 +27,6 @@ export class PersonaCardComponent implements OnInit {
     });
   }
   navigate(){
-    this.router.navigate(["update-persona-card/"+this.persona.id]);
+    this.router.navigate(["update-estudiante-card/"+this.persona.id]);
   }
 }

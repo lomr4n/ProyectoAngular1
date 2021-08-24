@@ -1,7 +1,7 @@
 <div class="general">
-    <h2 class="link" [routerLink] = "['/personas']">Volver</h2>
+    <h2 class="link" [routerLink] = "['/estudiantes']">Volver</h2>
 
-        <form class="personaForm" (submit)="submit()" [formGroup]="registerForm">
+        <form class="estudianteForm" (submit)="submit()" [formGroup]="registerForm">
 
         <input type="text" id="nombre" class="form__input" placeholder="Nombre" formControlName="user">
         <input type="text" id="apellido" class="form__input" placeholder="Apellido" formControlName="surname">
@@ -10,6 +10,10 @@
         <input type="email" id="email-personal" class="form__input" placeholder="Email personal" formControlName="personal_email">
         <input type="text" id="ciudad" class="form__input" placeholder="Ciudad" formControlName="city">
         <input type="text" id="url" class="form__input" placeholder="URL de imagen" formControlName="image_url">
+        <input type="number" id="url" class="form__input" placeholder="Horas semanales" formControlName="num_hours_week">
+        <input type="number" id="url" class="form__input" placeholder="Id profesor" formControlName="id_profesor">
+        <input type="text" id="url" class="form__input" placeholder="Materia" formControlName="branch">
+
         <div class="form__buttons">
             <input type="submit" class="form__button">
         </div>

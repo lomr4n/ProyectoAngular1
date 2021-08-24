@@ -2,7 +2,7 @@ import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../../aplication/api.service';
-import { Persona } from '../../model/persona';
+import { Estudiante } from '../../model/estudiante';
 
 @Component({
   selector: 'app-list',
@@ -12,7 +12,7 @@ import { Persona } from '../../model/persona';
 export class ListComponent implements OnInit {
 
   constructor(private api:ApiService, private router:Router) { }
-  personas: Persona[] | undefined;
+  estudiantes: Estudiante[] | undefined;
 
   ngOnInit(): void {
     this.getAll();
@@ -20,15 +20,15 @@ export class ListComponent implements OnInit {
 
   getAll(){
     this.api.getAll().subscribe(res=>{
-      this.personas=res;
+      this.estudiantes=res;
     })
   }
-  deletePersona(persona:Persona){
-    this.personas = this.personas?.filter(e=>{
-      return e.id != persona.id
+  deleteEstudiante(estudiante:Estudiante){
+    this.estudiantes = this.estudiantes?.filter(e=>{
+      return e.id != estudiante.id
     })
   }
   navigate(){
-    this.router.navigate(["/add-estudiante-card"]);
+    this.router.navigate(["/add-estudiante"]);
   }
 }

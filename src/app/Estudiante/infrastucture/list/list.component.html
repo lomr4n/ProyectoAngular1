@@ -1,0 +1,5 @@
+<div class="list-cards">
+    <h2 (click)="navigate()" class="link">Crear una nueva estudiante</h2>
+    <app-estudiante-card (updateArray)="deleteEstudiante($event)" *ngFor="let estudiante of estudiantes" [estudiante]="estudiante"></app-estudiante-card>
+</div>
+

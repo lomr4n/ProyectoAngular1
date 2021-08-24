@@ -2,17 +2,20 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Persona } from '../model/persona';
+import {environment} from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
+
 })
 export class ApiService {
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {
+  }
 
-  url:String="http://localhost:3000/personas"
+  url:string=environment.url+"/personas"
 
  crearPersona(persona:Persona): Observable<Persona>{
     return this.http.post<Persona>(`${this.url}`,persona);
@@ -27,7 +30,7 @@ export class ApiService {
     return this.http.delete(`${this.url}/${persona.id}`);
   }
 
- actualizarPersona(id:number, persona:Persona): Observable<Persona>{
-  return this.http.put<Persona>(`${this.url}/${id}`,persona);
-}
+   actualizarPersona(id:number, persona:Persona): Observable<Persona>{
+    return this.http.put<Persona>(`${this.url}/${id}`,persona);
+  }
 }

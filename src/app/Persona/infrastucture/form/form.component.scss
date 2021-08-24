@@ -2,9 +2,8 @@
 
 .general{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
@@ -22,7 +21,7 @@
         text-align: center;
         border: 2px solid gray;
         transition: 0.5s;
-
+        margin-bottom: 10px;
         &:hover{
             border: 2.5px solid black;
             border-radius: 20px;
@@ -46,7 +45,8 @@
         padding: 10px;
         color: white;
         transition: 0.5s;
-        &[type="submit"]{
+      margin-bottom: 20px;
+      &[type="submit"]{
             background-color: rgb(83, 204, 83);
         }
         &[type="reset"]{

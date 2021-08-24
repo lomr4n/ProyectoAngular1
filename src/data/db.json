@@ -26,5 +26,23 @@
       "termination_date": null,
       "id": 7
     }
+  ],
+  "estudiantes": [
+    {
+      "id": 1,
+      "user": "Alberto",
+      "password": "23123112",
+      "name": "Alberto",
+      "surname": "Martinez",
+      "company_email": "a@gmail.com",
+      "personal_email": "a@gmail.com",
+      "city": "Madrid",
+      "active": false,
+      "imagen_url": "https://google.com",
+      "created_date": "2021-08-24",
+      "num_hours_week": 40,
+      "id_profesor": 1,
+      "branch": "FrontEnd"
+    }
   ]
 }

@@ -1,0 +1,10 @@
+<div class="card">
+    <h2>{{estudiante.user}} {{estudiante.surname}}</h2>
+    <div class="card-body">
+        <p>Ciudad: {{estudiante.city}}</p>
+        <p>Email personal: {{estudiante.personal_email}}</p>
+        <p>Email corporativo: {{estudiante.company_email}}</p>
+        <button [routerLink] = "['/update-estudiante', estudiante.id]">Actualizar</button>
+        <button (click)="delete()">Borrar</button>
+    </div>
+</div>
